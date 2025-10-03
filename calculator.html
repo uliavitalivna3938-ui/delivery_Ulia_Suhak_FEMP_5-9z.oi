@@ -1,0 +1,53 @@
+<!-- 
+    Виконавець: Сугак Юлія
+    Номер навчальної групи: ФЕМП 5-9з
+-->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор доставки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <footer>
+        <p>© 2025 Калькулятор доставки | Виконала: Сугак Юлія, ФЕМП 5-9з</p>
+    </footer>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="calculator.html" class="active">Калькулятор доставки</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Калькулятор вартості доставки</h1>
+        <form id="delivery-form">
+            <label for="city">Місто:</label>
+            <select id="city">
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odessa">Одеса</option>
+            </select>
+
+            <label for="weight">Вага (кг):</label>
+            <input type="number" id="weight" min="0.1" step="0.1" required placeholder="Введіть вагу">
+
+            <label for="delivery-type">Тип доставки:</label>
+            <select id="delivery-type">
+                <option value="standard">Стандартна</option>
+                <option value="express">Експрес</option>
+            </select>
+
+            <button type="button" onclick="calculateDelivery()">Розрахувати</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
